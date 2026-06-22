@@ -8,33 +8,34 @@ export default function Hero() {
         {/* LEFT SIDE - TEXT */}
         <div className="text-center md:text-left">
 
-          <p className="text-blue-600 font-medium mb-2">
-            Full Stack Developer | ICT Educator | AI Enthusiast
+          <p className="text-blue-600 font-medium mb-3 tracking-wide">
+            Full Stack Developer • ICT Educator • AI Enthusiast
           </p>
 
           <h1 className="text-4xl md:text-5xl font-bold leading-tight">
-            Hi, I’m <span className="text-blue-600">Franklin Agbaje</span>
+            Hi, I’m{" "}
+            <span className="text-blue-600">Franklin Agbaje</span>
           </h1>
 
-          <p className="text-gray-600 mt-5 text-lg leading-8">
-            I build full-stack web applications using React, Python, and Django.
+          <p className="text-gray-600 mt-6 text-lg leading-8 max-w-xl mx-auto md:mx-0">
+            I build scalable full-stack web applications using React, Python, and Django.
             I also train students in programming and help them develop real-world
             digital skills with AI-powered learning methods.
           </p>
 
           {/* CTA BUTTONS */}
-          <div className="mt-8 flex gap-4 flex-wrap justify-center md:justify-start">
+          <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
 
             <a
               href="#projects"
-              className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition"
+              className="bg-blue-600 text-white px-6 py-3 rounded-lg shadow-sm hover:bg-blue-700 hover:shadow-md transition"
             >
               View My Work
             </a>
 
             <a
               href="#contact"
-              className="border border-gray-300 px-6 py-3 rounded-lg hover:border-blue-600 hover:text-blue-600 transition"
+              className="border border-gray-300 px-6 py-3 rounded-lg hover:border-blue-600 hover:text-blue-600 hover:shadow-sm transition"
             >
               Contact Me
             </a>
@@ -48,8 +49,8 @@ export default function Hero() {
 
           <div className="relative">
 
-            {/* Glow background (fixed layering) */}
-            <div className="absolute inset-0 scale-110 bg-blue-100 rounded-2xl blur-2xl opacity-50"></div>
+            {/* Background glow */}
+            <div className="absolute inset-0 scale-110 bg-blue-100 rounded-2xl blur-3xl opacity-40"></div>
 
             {/* Image */}
             <img

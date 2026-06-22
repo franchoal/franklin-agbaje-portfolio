@@ -27,158 +27,117 @@ export default function Projects() {
         {/* GRID */}
         <div className="grid md:grid-cols-3 gap-8">
 
-          {/* PROJECT 1 */}
-          <div className="group bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+          {/* PROJECT CARD */}
+          {[
+            {
+              img: churchImg,
+              title: "Church Management Website",
+              desc: "A responsive platform designed to improve church communication, event updates, member engagement, and digital administration.",
+              tech: ["React", "Django"],
+              color: "blue",
+            },
+            {
+              img: microfinanceImg,
+              title: "Microfinance Management System",
+              desc: "A financial system for tracking customers, loans, repayments, and automated transaction records.",
+              tech: ["Python", "Django"],
+              color: "green",
+            },
+            {
+              img: ecommerceImg,
+              title: "E-Commerce Platform",
+              desc: "A full-stack system with product management, cart functionality, and order processing workflows.",
+              tech: ["React", "API"],
+              color: "purple",
+            },
+          ].map((project, i) => (
+            <div
+              key={i}
+              className="group bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
+            >
 
-            {/* IMAGE */}
-            <img
-              src={churchImg}
-              alt="Church Management Website"
-              className="w-full h-120 object-cover object-top"
-            />
-
-            <div className="p-6">
-
-              <div className="h-1 w-12 bg-blue-600 rounded mb-4"></div>
-
-              <h3 className="text-xl font-semibold mb-2 group-hover:text-blue-600 transition">
-                Church Management Website
-              </h3>
-
-              <p className="text-gray-600 text-sm leading-6 mb-4">
-                A responsive platform designed to improve church communication,
-                event updates, member engagement, and digital administration.
-              </p>
-
-              {/* TECH STACK */}
-              <div className="flex flex-wrap gap-2 mb-5">
-                <span className="text-xs bg-blue-50 text-blue-600 px-3 py-1 rounded-full">
-                  React
-                </span>
-                <span className="text-xs bg-blue-50 text-blue-600 px-3 py-1 rounded-full">
-                  Django
-                </span>
+              {/* IMAGE */}
+              <div className="h-52 overflow-hidden">
+                <img
+                  src={project.img}
+                  alt={project.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
               </div>
 
-              {/* BUTTONS */}
-              <div className="flex gap-4">
-                <a
-                  href="#"
-                  className="bg-blue-600 text-white text-sm px-4 py-2 rounded-lg hover:bg-blue-700 transition"
-                >
-                  Live Demo
-                </a>
+              {/* CONTENT */}
+              <div className="p-6">
 
-                <a
-                  href="#"
-                  className="border border-gray-300 text-sm px-4 py-2 rounded-lg hover:border-gray-500 transition"
+                <div
+                  className={`h-1 w-12 rounded mb-4 ${
+                    project.color === "blue"
+                      ? "bg-blue-600"
+                      : project.color === "green"
+                      ? "bg-green-600"
+                      : "bg-purple-600"
+                  }`}
+                ></div>
+
+                <h3
+                  className={`text-xl font-semibold mb-2 transition ${
+                    project.color === "blue"
+                      ? "group-hover:text-blue-600"
+                      : project.color === "green"
+                      ? "group-hover:text-green-600"
+                      : "group-hover:text-purple-600"
+                  }`}
                 >
-                  GitHub
-                </a>
+                  {project.title}
+                </h3>
+
+                <p className="text-gray-600 text-sm leading-6 mb-4">
+                  {project.desc}
+                </p>
+
+                {/* TECH STACK */}
+                <div className="flex flex-wrap gap-2 mb-5">
+                  {project.tech.map((t, idx) => (
+                    <span
+                      key={idx}
+                      className={`text-xs px-3 py-1 rounded-full ${
+                        project.color === "blue"
+                          ? "bg-blue-50 text-blue-600"
+                          : project.color === "green"
+                          ? "bg-green-50 text-green-600"
+                          : "bg-purple-50 text-purple-600"
+                      }`}
+                    >
+                      {t}
+                    </span>
+                  ))}
+                </div>
+
+                {/* BUTTONS */}
+                <div className="flex gap-4">
+                  <a
+                    href="#"
+                    className={`text-sm px-4 py-2 rounded-lg text-white transition ${
+                      project.color === "blue"
+                        ? "bg-blue-600 hover:bg-blue-700"
+                        : project.color === "green"
+                        ? "bg-green-600 hover:bg-green-700"
+                        : "bg-purple-600 hover:bg-purple-700"
+                    }`}
+                  >
+                    Live Demo
+                  </a>
+
+                  <a
+                    href="#"
+                    className="text-sm px-4 py-2 rounded-lg border border-gray-300 hover:border-gray-500 transition"
+                  >
+                    GitHub
+                  </a>
+                </div>
+
               </div>
-
             </div>
-          </div>
-
-          {/* PROJECT 2 */}
-          <div className="group bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
-
-            <img
-              src={microfinanceImg}
-              alt="Microfinance System"
-              className="w-full h-70 object-cover object-top"
-            />
-
-            <div className="p-6">
-
-              <div className="h-1 w-12 bg-green-600 rounded mb-4"></div>
-
-              <h3 className="text-xl font-semibold mb-2 group-hover:text-green-600 transition">
-                Microfinance Management System
-              </h3>
-
-              <p className="text-gray-600 text-sm leading-6 mb-4">
-                A financial management system for tracking customers, loans,
-                repayments, and automated transaction records.
-              </p>
-
-              <div className="flex flex-wrap gap-2 mb-5">
-                <span className="text-xs bg-green-50 text-green-600 px-3 py-1 rounded-full">
-                  Python
-                </span>
-                <span className="text-xs bg-green-50 text-green-600 px-3 py-1 rounded-full">
-                  Django
-                </span>
-              </div>
-
-              <div className="flex gap-4">
-                <a
-                  href="#"
-                  className="bg-green-600 text-white text-sm px-4 py-2 rounded-lg hover:bg-green-700 transition"
-                >
-                  Live Demo
-                </a>
-
-                <a
-                  href="#"
-                  className="border border-gray-300 text-sm px-4 py-2 rounded-lg hover:border-gray-500 transition"
-                >
-                  GitHub
-                </a>
-              </div>
-
-            </div>
-          </div>
-
-          {/* PROJECT 3 */}
-          <div className="group bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
-
-            <img
-              src={ecommerceImg}
-              alt="E-Commerce Platform"
-              className="w-full h-80 object-cover object-top"
-            />
-
-            <div className="p-6">
-
-              <div className="h-1 w-12 bg-purple-600 rounded mb-4"></div>
-
-              <h3 className="text-xl font-semibold mb-2 group-hover:text-purple-600 transition">
-                E-Commerce Platform
-              </h3>
-
-              <p className="text-gray-600 text-sm leading-6 mb-4">
-                A full-stack e-commerce system with product management,
-                shopping cart functionality, and order processing workflows.
-              </p>
-
-              <div className="flex flex-wrap gap-2 mb-5">
-                <span className="text-xs bg-purple-50 text-purple-600 px-3 py-1 rounded-full">
-                  React
-                </span>
-                <span className="text-xs bg-purple-50 text-purple-600 px-3 py-1 rounded-full">
-                  API
-                </span>
-              </div>
-
-              <div className="flex gap-4">
-                <a
-                  href="#"
-                  className="bg-purple-600 text-white text-sm px-4 py-2 rounded-lg hover:bg-purple-700 transition"
-                >
-                  Live Demo
-                </a>
-
-                <a
-                  href="#"
-                  className="border border-gray-300 text-sm px-4 py-2 rounded-lg hover:border-gray-500 transition"
-                >
-                  GitHub
-                </a>
-              </div>
-
-            </div>
-          </div>
+          ))}
 
         </div>
       </div>

@@ -7,7 +7,7 @@ export default function Contact() {
       <div className="max-w-5xl mx-auto">
 
         {/* HEADER */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-14">
 
           <h2 className="text-3xl md:text-4xl font-bold">
             Let’s Work Together
@@ -15,7 +15,7 @@ export default function Contact() {
 
           <div className="w-16 h-1 bg-white rounded mt-3 mx-auto"></div>
 
-          <p className="mt-4 text-blue-100 max-w-2xl mx-auto">
+          <p className="mt-4 text-blue-100 max-w-2xl mx-auto leading-7">
             I’m open to teaching roles, software development opportunities,
             and collaborative projects in education and technology.
           </p>
@@ -31,7 +31,7 @@ export default function Contact() {
 
             <a
               href="mailto:franchoal1919@gmail.com"
-              className="text-blue-100 hover:text-white transition"
+              className="text-blue-100 hover:text-white transition break-all"
             >
               franchoal1919@gmail.com
             </a>
@@ -41,7 +41,7 @@ export default function Contact() {
           <div className="bg-white/10 border border-white/20 p-6 rounded-2xl hover:bg-white/15 transition">
             <h3 className="font-semibold mb-2">Phone</h3>
 
-            <div className="flex flex-col gap-1">
+            <div className="flex flex-col gap-2">
               <a
                 href="tel:+2348053455147"
                 className="text-blue-100 hover:text-white transition"
@@ -66,9 +66,9 @@ export default function Contact() {
               href="https://www.linkedin.com/in/franklin-agbaje/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-100 hover:text-white transition"
+              className="text-blue-100 hover:text-white transition break-all"
             >
-              View Profile
+              linkedin.com/in/franklin-agbaje
             </a>
           </div>
 
@@ -80,16 +80,16 @@ export default function Contact() {
               href="https://github.com/franchoal"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-100 hover:text-white transition"
+              className="text-blue-100 hover:text-white transition break-all"
             >
-              View Repositories
+              github.com/franchoal
             </a>
           </div>
 
         </div>
 
-        {/* CTA BUTTONS (NEW PROFESSIONAL ADDITION) */}
-        <div className="mt-12 flex flex-col md:flex-row gap-4 justify-center">
+        {/* CTA BUTTONS */}
+        <div className="mt-14 flex flex-col md:flex-row gap-4 justify-center">
 
           <a
             href="mailto:franchoal1919@gmail.com"
