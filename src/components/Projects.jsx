@@ -132,45 +132,54 @@ export default function Projects() {
                 </div>
 
                 {/* BUTTONS */}
-                <div className="flex gap-4">
+<div className="flex gap-3 flex-wrap">
 
-                  {project.live ? (
-                    <a
-                      href={project.live}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={`text-sm px-4 py-2 rounded-lg text-white transition ${
-                        project.color === "blue"
-                          ? "bg-blue-600 hover:bg-blue-700"
-                          : project.color === "green"
-                          ? "bg-green-600 hover:bg-green-700"
-                          : "bg-purple-600 hover:bg-purple-700"
-                      }`}
-                    >
-                      Live Demo
-                    </a>
-                  ) : (
-                    <span className="text-sm px-4 py-2 rounded-lg bg-gray-100 text-gray-500">
-                      Internal Project
-                    </span>
-                  )}
+  {/* LIVE DEMO */}
+  {project.live ? (
+    <a
+      href={project.live}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={`text-sm px-4 py-2 rounded-lg text-white transition shadow-sm ${
+        project.color === "blue"
+          ? "bg-blue-600 hover:bg-blue-700"
+          : project.color === "green"
+          ? "bg-green-600 hover:bg-green-700"
+          : "bg-purple-600 hover:bg-purple-700"
+      }`}
+    >
+      Live Demo
+    </a>
+  ) : (
+    <span className="text-sm px-4 py-2 rounded-lg bg-gray-100 text-gray-600 border border-gray-200">
+      🚧 No Live Demo
+    </span>
+  )}
 
-                  {project.github ? (
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-sm px-4 py-2 rounded-lg border border-gray-300 hover:border-gray-500 transition"
-                    >
-                      GitHub
-                    </a>
-                  ) : (
-                    <span className="text-sm px-4 py-2 rounded-lg border border-gray-200 text-gray-400">
-                      Private
-                    </span>
-                  )}
+  {/* GITHUB */}
+  {project.github ? (
+    <a
+      href={project.github}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-sm px-4 py-2 rounded-lg border border-gray-300 hover:border-gray-500 hover:bg-gray-50 transition"
+    >
+      GitHub
+    </a>
+  ) : (
+    <span className="text-sm px-4 py-2 rounded-lg bg-gray-50 text-gray-500 border border-dashed border-gray-300">
+      🔒 Private Code
+    </span>
+  )}
 
-                </div>
+  {/* SPECIAL TAG (optional but powerful) */}
+  {!project.live && !project.github && (
+    <span className="text-sm px-4 py-2 rounded-lg bg-blue-50 text-blue-600 border border-blue-100">
+      🎓 Training / Institutional Project
+    </span>
+  )}
+
+</div>
 
               </div>
             </div>
