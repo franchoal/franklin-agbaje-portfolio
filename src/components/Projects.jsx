@@ -25,7 +25,7 @@ export default function Projects() {
     },
     {
       img: ecommerceImg,
-      title: "E-Commerce Platform",
+      title: "Oja-Oko/ Farm-Market",
       desc: "A full-stack system with product management, cart functionality, and order processing workflows.",
       tech: ["React", "API"],
       color: "purple",
