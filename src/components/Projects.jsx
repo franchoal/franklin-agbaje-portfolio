@@ -1,6 +1,7 @@
 import churchImg from "../assets/projects/church.jpg";
 import microfinanceImg from "../assets/projects/microfinance.png";
 import ecommerceImg from "../assets/projects/ecommerce.jpg";
+import schoolImg from "../assets/projects/school.jpg"; // 👈 ADD YOUR CLASSROOM IMAGE HERE
 
 export default function Projects() {
   const projects = [
@@ -11,7 +12,7 @@ export default function Projects() {
       tech: ["React", "Django"],
       color: "blue",
       live: "https://your-church-project.vercel.app",
-      github: "https://github.com/franchoal/church-management"
+      github: "https://github.com/franchoal/church-management",
     },
     {
       img: microfinanceImg,
@@ -20,7 +21,7 @@ export default function Projects() {
       tech: ["Python", "Django"],
       color: "green",
       live: "https://your-microfinance-project.vercel.app",
-      github: "https://github.com/franchoal/microfinance-system"
+      github: "https://github.com/franchoal/microfinance-system",
     },
     {
       img: ecommerceImg,
@@ -29,8 +30,19 @@ export default function Projects() {
       tech: ["React", "API"],
       color: "purple",
       live: "https://your-ecommerce-project.vercel.app",
-      github: "https://github.com/franchoal/ecommerce-app"
-    }
+      github: "https://github.com/franchoal/ecommerce-app",
+    },
+
+    // 🚀 NEW: SCHOOL PROJECT
+    {
+      img: schoolImg,
+      title: "Franchoal_Dev School Of Programming",
+      desc: "A hands-on programming training initiative focused on teaching students full-stack development, practical coding skills, and real-world project building in a classroom environment.",
+      tech: ["Training", "Full Stack", "Mentorship"],
+      color: "blue",
+      live: null,
+      github: null,
+    },
   ];
 
   return (
@@ -49,7 +61,7 @@ export default function Projects() {
           <div className="w-20 h-1 bg-blue-600 mx-auto mt-3 rounded"></div>
 
           <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
-            A selection of real-world systems I’ve built for education, finance,
+            A selection of real-world systems and training initiatives I’ve built for education, finance,
             and e-commerce solutions.
           </p>
         </div>
@@ -121,29 +133,43 @@ export default function Projects() {
 
                 {/* BUTTONS */}
                 <div className="flex gap-4">
-                  <a
-                    href={project.live}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`text-sm px-4 py-2 rounded-lg text-white transition ${
-                      project.color === "blue"
-                        ? "bg-blue-600 hover:bg-blue-700"
-                        : project.color === "green"
-                        ? "bg-green-600 hover:bg-green-700"
-                        : "bg-purple-600 hover:bg-purple-700"
-                    }`}
-                  >
-                    Live Demo
-                  </a>
 
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm px-4 py-2 rounded-lg border border-gray-300 hover:border-gray-500 transition"
-                  >
-                    GitHub
-                  </a>
+                  {project.live ? (
+                    <a
+                      href={project.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`text-sm px-4 py-2 rounded-lg text-white transition ${
+                        project.color === "blue"
+                          ? "bg-blue-600 hover:bg-blue-700"
+                          : project.color === "green"
+                          ? "bg-green-600 hover:bg-green-700"
+                          : "bg-purple-600 hover:bg-purple-700"
+                      }`}
+                    >
+                      Live Demo
+                    </a>
+                  ) : (
+                    <span className="text-sm px-4 py-2 rounded-lg bg-gray-100 text-gray-500">
+                      Internal Project
+                    </span>
+                  )}
+
+                  {project.github ? (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm px-4 py-2 rounded-lg border border-gray-300 hover:border-gray-500 transition"
+                    >
+                      GitHub
+                    </a>
+                  ) : (
+                    <span className="text-sm px-4 py-2 rounded-lg border border-gray-200 text-gray-400">
+                      Private
+                    </span>
+                  )}
+
                 </div>
 
               </div>
