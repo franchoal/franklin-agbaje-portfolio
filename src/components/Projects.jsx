@@ -37,7 +37,7 @@ export default function Projects() {
     {
       img: schoolImg,
       title: "Franchoal_Dev School Of Programming",
-      desc: "A hands-on programming training initiative focused on teaching students full-stack development, practical coding skills, and real-world project building in a classroom environment.",
+      desc: "A hands-on programming training initiative focused on teaching students full-stack development, practical coding skills, and real-world project building both online and in a classroom environment.",
       tech: ["Training", "Full Stack", "Mentorship"],
       color: "blue",
       live: null,
