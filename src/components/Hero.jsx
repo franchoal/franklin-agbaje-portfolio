@@ -8,8 +8,8 @@ export default function Hero() {
         {/* LEFT SIDE - TEXT */}
         <div className="text-center md:text-left">
 
-          <p className="text-blue-600 font-medium mb-3 tracking-wide">
-            Full Stack Developer • ICT Educator • AI Enthusiast
+          <p className="text-blue-600 font-medium mb-4 tracking-wide">
+            Full Stack Developer • ICT Educator • AI & Systems Builder
           </p>
 
           <h1 className="text-4xl md:text-5xl font-bold leading-tight">
@@ -18,9 +18,9 @@ export default function Hero() {
           </h1>
 
           <p className="text-gray-600 mt-6 text-lg leading-8 max-w-xl mx-auto md:mx-0">
-            I build scalable full-stack web applications using React, Python, and Django.
-            I also train students in programming and help them develop real-world
-            digital skills with AI-powered learning methods.
+            I design and build scalable web applications using React and Django,
+            while also training developers and students in practical software engineering,
+            problem-solving, and AI-powered workflows.
           </p>
 
           {/* CTA BUTTONS */}
@@ -28,16 +28,16 @@ export default function Hero() {
 
             <a
               href="#projects"
-              className="bg-blue-600 text-white px-6 py-3 rounded-lg shadow-sm hover:bg-blue-700 hover:shadow-md transition"
+              className="bg-blue-600 text-white px-6 py-3 rounded-lg shadow-sm hover:bg-blue-700 hover:shadow-md transition font-medium"
             >
-              View My Work
+              View Projects
             </a>
 
             <a
               href="#contact"
-              className="border border-gray-300 px-6 py-3 rounded-lg hover:border-blue-600 hover:text-blue-600 hover:shadow-sm transition"
+              className="border border-gray-300 px-6 py-3 rounded-lg hover:border-blue-600 hover:text-blue-600 hover:shadow-sm transition font-medium"
             >
-              Contact Me
+              Let’s Talk
             </a>
 
           </div>

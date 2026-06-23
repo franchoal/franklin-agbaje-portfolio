@@ -8,26 +8,24 @@ export default function Contact() {
 
         {/* HEADER */}
         <div className="text-center mb-14">
-
           <h2 className="text-3xl md:text-4xl font-bold">
             Let’s Work Together
           </h2>
 
           <div className="w-16 h-1 bg-white rounded mt-3 mx-auto"></div>
 
-          <p className="mt-4 text-blue-100 max-w-2xl mx-auto leading-7">
-            I’m open to teaching roles, software development opportunities,
-            and collaborative projects in education and technology.
+          <p className="mt-5 text-blue-100 max-w-2xl mx-auto leading-7">
+            I’m open to software development roles, ICT training opportunities,
+            and collaborative projects in education, technology, and AI systems.
           </p>
-
         </div>
 
-        {/* CONTACT CARDS */}
+        {/* CONTACT GRID */}
         <div className="grid md:grid-cols-2 gap-6">
 
           {/* EMAIL */}
           <div className="bg-white/10 border border-white/20 p-6 rounded-2xl hover:bg-white/15 transition">
-            <h3 className="font-semibold mb-2">Email</h3>
+            <h3 className="font-semibold mb-3">Email</h3>
 
             <a
               href="mailto:franchoal1919@gmail.com"
@@ -39,7 +37,7 @@ export default function Contact() {
 
           {/* PHONE */}
           <div className="bg-white/10 border border-white/20 p-6 rounded-2xl hover:bg-white/15 transition">
-            <h3 className="font-semibold mb-2">Phone</h3>
+            <h3 className="font-semibold mb-3">Phone</h3>
 
             <div className="flex flex-col gap-2">
               <a
@@ -60,7 +58,7 @@ export default function Contact() {
 
           {/* LINKEDIN */}
           <div className="bg-white/10 border border-white/20 p-6 rounded-2xl hover:bg-white/15 transition">
-            <h3 className="font-semibold mb-2">LinkedIn</h3>
+            <h3 className="font-semibold mb-3">LinkedIn</h3>
 
             <a
               href="https://www.linkedin.com/in/franklin-agbaje/"
@@ -68,13 +66,13 @@ export default function Contact() {
               rel="noopener noreferrer"
               className="text-blue-100 hover:text-white transition break-all"
             >
-              linkedin.com/in/franklin-agbaje
+              View LinkedIn Profile
             </a>
           </div>
 
           {/* GITHUB */}
           <div className="bg-white/10 border border-white/20 p-6 rounded-2xl hover:bg-white/15 transition">
-            <h3 className="font-semibold mb-2">GitHub</h3>
+            <h3 className="font-semibold mb-3">GitHub</h3>
 
             <a
               href="https://github.com/franchoal"
@@ -82,7 +80,7 @@ export default function Contact() {
               rel="noopener noreferrer"
               className="text-blue-100 hover:text-white transition break-all"
             >
-              github.com/franchoal
+              View GitHub Projects
             </a>
           </div>
 
@@ -102,14 +100,14 @@ export default function Contact() {
             href="tel:+2348053455147"
             className="border border-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-700 transition text-center"
           >
-            Call Me
+            Call Me Now
           </a>
 
         </div>
 
         {/* FOOTER NOTE */}
         <div className="mt-12 text-center text-blue-100 text-sm">
-          Available for teaching roles, internships, and full-stack opportunities.
+          Available for full-stack development, ICT training, and AI-driven learning projects.
         </div>
 
       </div>

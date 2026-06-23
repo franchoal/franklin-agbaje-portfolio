@@ -3,6 +3,36 @@ import microfinanceImg from "../assets/projects/microfinance.png";
 import ecommerceImg from "../assets/projects/ecommerce.jpg";
 
 export default function Projects() {
+  const projects = [
+    {
+      img: churchImg,
+      title: "Church Management Website",
+      desc: "A responsive platform designed to improve church communication, event updates, member engagement, and digital administration.",
+      tech: ["React", "Django"],
+      color: "blue",
+      live: "https://your-church-project.vercel.app",
+      github: "https://github.com/franchoal/church-management"
+    },
+    {
+      img: microfinanceImg,
+      title: "Microfinance Management System",
+      desc: "A financial system for tracking customers, loans, repayments, and automated transaction records.",
+      tech: ["Python", "Django"],
+      color: "green",
+      live: "https://your-microfinance-project.vercel.app",
+      github: "https://github.com/franchoal/microfinance-system"
+    },
+    {
+      img: ecommerceImg,
+      title: "E-Commerce Platform",
+      desc: "A full-stack system with product management, cart functionality, and order processing workflows.",
+      tech: ["React", "API"],
+      color: "purple",
+      live: "https://your-ecommerce-project.vercel.app",
+      github: "https://github.com/franchoal/ecommerce-app"
+    }
+  ];
+
   return (
     <section
       id="projects"
@@ -27,30 +57,7 @@ export default function Projects() {
         {/* GRID */}
         <div className="grid md:grid-cols-3 gap-8">
 
-          {/* PROJECT CARD */}
-          {[
-            {
-              img: churchImg,
-              title: "Church Management Website",
-              desc: "A responsive platform designed to improve church communication, event updates, member engagement, and digital administration.",
-              tech: ["React", "Django"],
-              color: "blue",
-            },
-            {
-              img: microfinanceImg,
-              title: "Microfinance Management System",
-              desc: "A financial system for tracking customers, loans, repayments, and automated transaction records.",
-              tech: ["Python", "Django"],
-              color: "green",
-            },
-            {
-              img: ecommerceImg,
-              title: "E-Commerce Platform",
-              desc: "A full-stack system with product management, cart functionality, and order processing workflows.",
-              tech: ["React", "API"],
-              color: "purple",
-            },
-          ].map((project, i) => (
+          {projects.map((project, i) => (
             <div
               key={i}
               className="group bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
@@ -115,7 +122,9 @@ export default function Projects() {
                 {/* BUTTONS */}
                 <div className="flex gap-4">
                   <a
-                    href="#"
+                    href={project.live}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className={`text-sm px-4 py-2 rounded-lg text-white transition ${
                       project.color === "blue"
                         ? "bg-blue-600 hover:bg-blue-700"
@@ -128,7 +137,9 @@ export default function Projects() {
                   </a>
 
                   <a
-                    href="#"
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-sm px-4 py-2 rounded-lg border border-gray-300 hover:border-gray-500 transition"
                   >
                     GitHub
